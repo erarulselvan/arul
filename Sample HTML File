@@ -1,0 +1,724 @@
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/css/red.css" media="all" class="changeme" />
+<link rel="stylesheet" type="text/css" href="style/css/media-queries.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/type/titillium.css" media="all" />
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="screen" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="screen" />
+<![endif]-->
+<script type="text/javascript" src="style/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.quicksand.js"></script>
+<script type="text/javascript" src="style/js/jquery.easing.js"></script>
+<script type="text/javascript" src="style/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="style/js/twitter.min.js"></script>
+<script type="text/javascript" src="style/js/mosaic.1.0.1.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.easytabs.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.slickforms.js"></script>
+<script type="text/javascript" src="style/js/selectnav.js"></script>
+<script type="text/javascript" src="style/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="style/js/tagcanvas.min.js"></script>
+
+<script type="text/javascript" src="style/js/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="style/js/fancybox/jquery.fancybox.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.2" />
+<script type="text/javascript" src="style/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.2"></script>
+<link rel="stylesheet" type="text/css" href="style/js/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.2" />
+<script type="text/javascript" src="style/js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.2"></script>
+<script type="text/javascript" src="style/js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.0"></script>
+
+<!-- DEMO ONLY -->
+<script type="text/javascript" src="switcher/jquery.tabSlideOut.v1.3.js"></script>
+<script type="text/javascript">
+if($.cookie("css") || $.cookie("img")) {
+	$("link.changeme").attr("href",$.cookie("css"));
+	$("img.dirname").attr("href",$.cookie("img"));
+}
+$(document).ready(function() { 
+	$("#navigation123 li a").click(function() { 	
+		$("link.changeme").attr("href",$(this).attr('rel'));
+		$("img.dirname").attr("href",$(this).attr('dir'));
+		$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+		$.cookie("img",$(this).attr('dir'), {expires: 365, path: '/'});
+		return false;
+	});
+
+	  // Initialise the tag canvas
+  TagCanvas.textFont = 'Arial, Helvetica, sans-serif';
+	TagCanvas.textColour = '#FFF';
+	TagCanvas.textHeight = 50;
+	TagCanvas.outlineColour = '#FFF';
+	TagCanvas.maxSpeed = 0.03;
+	TagCanvas.minBrightness = 0.2;
+	TagCanvas.depth = 0.45;
+	TagCanvas.pulsateTo = 0.6;
+	TagCanvas.initial = [0.1,-0.1];
+	TagCanvas.decel = 0.98;
+	TagCanvas.reverse = true;
+	TagCanvas.hideTags = false;
+	TagCanvas.weight = true;
+	TagCanvas.weightMode = 'size';
+
+	try {
+    var canstart = false;
+    if (jQuery.browser.msie) {
+      if (parseInt(jQuery.browser.version) > 8) {
+        canstart = true;
+      }
+    }
+    else {
+      canstart = true;
+    }
+    if (canstart) {
+      TagCanvas.Start('tagcanvas', 'tagcontain');
+    }
+	}
+	catch(e) {
+    if (document.getElementById('cmsg') != null) {
+      document.getElementById('cmsg').style.display='none';
+      document.getElementsByTagName('canvas')[0].style.border='0';
+    }
+	}	
+	
+	
+	
+	
+});
+</script>
+
+<div id="wrapper"> 
+  <!-- Begin Header -->
+  <div id="header">
+    <div id="logo">
+      <a href="index.html"><img src="style/images/logo.png" alt=""/></a>
+    </div>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#offers">Packages</a></li>
+      <li><a href="#testi">Testimonials</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <!-- End Header --> 
+  
+  <!-- Begin Top Section -->
+  <div id="home" class="borderline"> 
+    <div class="title"><h2>Home <span>Welcome</span></h2><div class="gototop"><a href="#top" class="scrolltop" title="Go to Top"></a></div></div>
+    <!-- Begin Slider -->
+	<div id="slider">
+
+		<div class="flexslider">
+	    <ul class="slides">
+	    	<li><img src="style/images/banners/websiteprogram_banner.jpg" alt=""/></li>
+	    	<li><img src="style/images/banners/career_banner.jpg" alt=""/><!--<p class="flex-caption">Ipsum Egestas Ultricies Cursus Pellentesque.</p>--></li>
+	    	<li><img src="style/images/banners/aboutus_banner.jpg" alt=""/></li>
+            <li><img src="style/images/banners/portfolio_banner.jpg" alt=""/></li>
+            <li><img src="style/images/banners/services_banner.jpg" alt=""/></li>
+            <li><img src="style/images/banners/testimonails_banner.jpg" alt=""/></li>
+            <li><img src="style/images/banners/contactus_banner.jpg" alt=""/></li>
+	    </ul>
+	  </div>
+
+	</div>
+    <!-- End Slider --> 
+    <!-- Begin Services -->
+    <div id="service-columns">
+    <h1 align="left">Technologies We Use</h1>
+      <div class="one-sixth">
+      <h2>Php &amp; Mysql</h2>
+      	<img src="style/images/tech-logos/php_mysql_logo.png" alt=""/>
+      </div>
+      <div class="one-sixth"> 
+              <h2>HTML5</h2>
+      	<img src="style/images/tech-logos/html_logo.png" alt=""/>
+      </div>
+      <div class="one-sixth"> 
+              <h2>JQuery</h2>
+      	<img src="style/images/tech-logos/jquery-logo.png" alt=""/>
+      </div>
+      <div class="one-sixth"> 
+              <h2>Joomla</h2>
+      	<img src="style/images/tech-logos/joomla_logo.png" alt=""/>
+      </div>
+      <div class="one-sixth"> 
+              <h2>Wordpress</h2>
+      	<img src="style/images/tech-logos/wordpress_logo.png" alt=""/>
+      </div>
+      <div class="one-sixth last"> 
+              <h2>PSD to XHTML</h2>
+      	<img src="style/images/tech-logos/xhtml.png" alt=""/>
+      </div>   
+      
+      <div class="one-sixth"> 
+              <h2>Opencart</h2>
+      	<img src="style/images/tech-logos/opencart-logo.png" alt=""/>
+      </div>
+      <div class="one-sixth"> 
+              <h2>Zencart</h2>
+      	<img src="style/images/tech-logos/zencart.png" alt=""/>
+      </div>
+      <div class="one-sixth"> 
+              <h2>Magento</h2>
+      	<img src="style/images/tech-logos/magento_logo.png" alt=""/>
+      </div>
+      <div class="one-sixth"> 
+              <h2>Oscommerce</h2>
+      	<img src="style/images/tech-logos/oscommerce_logo.png" alt=""/>
+      </div>
+      <div class="one-sixth last"> 
+              <h2>Drupal</h2>
+      <img src="style/images/tech-logos/drupal_logo.png" alt=""/>
+      </div>
+       <div class="one-sixth">
+               <h2>Responsive Layout</h2>
+      	<img src="style/images/tech-logos/responsive-logo.png" alt=""/>
+      </div>
+    </div>
+    <!-- End Services --> 
+  </div>
+  <!-- End Top Section --> 
+  
+  <!-- Begin About Section -->
+  <div id="about" class="borderline">
+  	<div class="title"><h2>About <span>Company Biography</span></h2><div class="gototop"><a href="#top" class="scrolltop" title="Go to Top"></a></div></div>
+    <div class="section-container">
+    <h2>About Marvelwebsolutions</h2>
+    <p><strong>Marvel Web Solutions</strong> is headquartered in India, with office in Leeds UK.</p>
+
+      <p><strong>Marvel Web Solutions</strong> is an award winning   web design and creative company, providing professional website design,   Ecommerce and CMS systems as well as branding and graphic design   solutions for the private and public sector.</p>
+      <p> Why compromise? As a leading web design agency based in India,   we offer competitive fees, websites featuring the latest web 2.0   technologies, and helpful service throughout. Our high-calibre   professional web designers, guarantee that our clients acquire a high   quality website that will not only achieve all its objectives, but also   surpass your expectations. Our experience is vast - we have been in the   web design business for over 5 years.</p>
+      <p>Our professional team of web designers is made up of highly   trained staff, including Project Managers, Graphic Designers, Web   Developers, Web Designers and  Programmers. </p>
+      <p><strong>We&rsquo;ve built our service on following three areas: </strong></p>
+      <ul>
+        <li>Developing web based solution to cater your business requirement</li>
+        <li>Offering online marketing and internet branding to get more business</li>
+        <li>Providing excellent customer services</li>
+      </ul>
+      <p>We are not looking for just one off business deal but we thrive   on successful customer relationship. Whether you are successful player   in your business domain or new to business, we are confident that our   personal care to each and every project keeps high customer retention   ratio. Just treat us as part of your business &ndash; we will be your own   personal IT staff. <br>
+        Experience that count</p>
+      <p>Our management team has in depth experience of designing,   developing and implementing web based and stand alone solution for   clients all over the world. From our experience we grab every   opportunity to offer our experience and expertise to our client. So when   we are the part of our client team, our clients are benefited from our   vast functional and technical knowledge and experience.</p>
+      <p><strong>Reliability we offer</strong></p>
+      <p>We just don&rsquo;t give commitment to our client, but we are   responsible for our commitment. We do project from scratch to make it   live. Also we cater special phase of our client project like attractive   designing or optimized database design and development. We can develop   and implement almost all solution remotely, which can save lots of your   valuable time. We do not have call center, so whenever you will contact   us, you will directly speak with us.</p>
+      <p><strong>Values on which we thrive</strong></p>
+      <p>We do not work as service provider with our client but we work   as part of our client team &ndash; offer special personal touch to project. We   deliver right solution which fulfills your requirement at very   competitive cost. We constantly update our knowledge to offer you stat   of the art technology.</p>
+      <p><strong>Our Team &ndash; Our Strength</strong></p>
+      <p>We just not hire people to work with us but we have built   family of skilled, formally educated and talented individuals who are   always ready to take up new challenges. We support passion of our family   by providing stat of the art infrastructure.</p>
+      <p><strong>Cost</strong></p>
+      <p>Do not get surprised by our very competitive cost. We can offer   you very exciting cost because we can keep our operational cost minimum   by our management experience. We passed the outcome of such efforts to   all our clients. Our developer gain extensive functional knowledge which   allows us to deliver solution at minimal time to avoid extra burden.</p>
+      <p><strong>Quality &ndash; No Compromise</strong></p>
+      <p>We never compromise with our quality. We deliver more then a   solution because our team enjoy to deal with challenges and we transfer   our enthusiasm to solution. We have implemented comprehensive project   management tool to keep track of each and every milestone of project. We   keep our client informed for each stage of project to keep transparency   in communication.</p>
+      <p>Do not get hesitate to know more about our service, or feel free to discuss your requirement with us, kindly <a href="index.html#contact">contact us</a>.</p>
+    </div>
+  </div>
+  <!-- End About Section --> 
+  
+  <!-- Begin Portfolio Section -->
+  <div id="portfolio" class="borderline"> 
+  	<div class="title"><h2>Portfolio <span>Our Works</span></h2><div class="gototop"><a href="#top" class="scrolltop" title="Go to Top"></a></div></div>
+    <!-- Begin Portfolio Navigation -->
+    <ul id="content" class="gallerynav filter">
+      <li class="all active"><a href="#">All</a></li>
+      <li class="web"><a href="#">Web Designs</a></li>
+      <li class="cweb"><a href="#">Custom Website</a></li>
+      <li class="wordpress"><a href="#">Wordpress</a></li>
+      <li class="joomla"><a href="#">Joomal</a></li>
+      <li class="shopping"><a href="#">Shopping Website</a></li>
+      <li class="logs"><a href="#">Logos</a></li>
+      <li class="cards"><a href="#">Printing Cards</a></li>
+    </ul>
+    <!-- End Portfolio Navigation --> 
+    
+    <!-- Begin Portfolio Elements -->
+    <ul id="gallery" class="grid">
+      
+      <li data-id="id-1" class="portfolio-item" data-type="web"> 
+        <a href="style/portfolio/web01_big.jpg" class="fancybox-media" title="High Life Seeds">
+        	<div class="caption">High Life Seeds</div>
+        	<img src="style/portfolio/web01.jpg" alt=""/>
+        </a> 
+      </li>
+
+
+      <li data-id="id-2" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web02_big.jpg" class="fancybox-media" title="PCM Energy">
+      		<div class="caption">PCM Energy</div>
+      		<img src="style/portfolio/web02.jpg" alt=""/> 
+      	</a> 
+      </li>
+
+
+      <li data-id="id-3" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web03_big.jpg" class="fancybox-media" title="SG Consulting">
+      		<div class="caption">SG Consulting</div>
+      		<img src="style/portfolio/web03.jpg" alt=""/> 
+      	</a> 
+      </li>
+
+
+      <li data-id="id-4" class="portfolio-item" data-type="cweb">
+      	<a href="http://www.mruglymug.com/" target="_blank" class="fancybox-media" title="Murgulymug">
+      		<div class="caption">Murgulymug</div>
+      		<img src="style/portfolio/web04.jpg" alt=""/> 
+        </a> 
+      </li>
+
+
+      <li data-id="id-5" class="portfolio-item" data-type="cweb">
+      	<a href="http://marvelwebsolutions.com/preview/srimahalakshmichemicals/" target="_blank" class="fancybox-media" title="Sri Mahalakshmi">
+      		<div class="caption">Sri Mahalakshmi</div>
+      		<img src="style/portfolio/web05.jpg" alt=""/> 
+        </a> 
+      </li>
+
+
+      <li data-id="id-6" class="portfolio-item" data-type="cweb">
+      	<a href="http://xlcoatings.com/" target="_blank" class="fancybox-media" title="Excel Coating">
+      		<div class="caption">Excel Coating</div>
+      		<img src="style/portfolio/web06.jpg" alt=""/> 
+        </a>
+      </li>
+      
+      <li data-id="id-6" class="portfolio-item" data-type="cards">
+      	<a href="style/portfolio/card01_big.jpg" class="fancybox-media" title="Karmic">
+      		<div class="caption">Karmic</div>
+      		<img src="style/portfolio/card01.jpg" alt=""/> 
+        </a>
+      </li>
+      
+      <li data-id="id-6" class="portfolio-item" data-type="cards">
+      	<a href="style/portfolio/card02_big.jpg" class="fancybox-media" title="Karmic">
+      		<div class="caption">Karmic</div>
+      		<img src="style/portfolio/card02.jpg" alt=""/> 
+        </a>
+      </li>
+
+
+      <li data-id="id-7" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web07_big.jpg" class="fancybox-media" title="Deivanai Constructions">
+      		<div class="caption">Deivanai Constructions</div>
+      		<img src="style/portfolio/web07.jpg" alt=""/> 
+      	</a> 
+      </li>
+      
+       <li data-id="id-12" class="portfolio-item" data-type="logs">
+      	<a href="style/portfolio/logo_thumb05.jpg" class="fancybox-media" title="Calora Baby">
+      		<div class="caption">Calora Baby</div>
+      		<img src="style/portfolio/logo_thumb05.jpg" alt=""/> 
+        </a> 
+      </li>
+
+
+      <li data-id="id-8" class="portfolio-item" data-type="cweb">
+      	<a href="http://www.drknmuthu.com/"  target="_blank" class="fancybox-media" title="Dr.K.Nachimuthu">
+      		<div class="caption">Dr.K.Nachimuthu</div>
+      		<img src="style/portfolio/web08.jpg" alt=""/> 
+        </a> 
+      </li>
+
+
+      <li data-id="id-9" class="portfolio-item" data-type="cweb">
+      	<a href="http://marvelwebsolutions.com/preview/bristar/" target="_blank" class="fancybox-media" title="Bristar Yatch">
+      		<div class="caption">Bristar Yatch</div>
+      		<img src="style/portfolio/web09.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+       <li data-id="id-12" class="portfolio-item" data-type="logs">
+      	<a href="style/portfolio/logo_thumb04.jpg" class="fancybox-media" title="Calora Dating">
+      		<div class="caption">Calora Dating</div>
+      		<img src="style/portfolio/logo_thumb04.jpg" alt=""/> 
+        </a> 
+      </li>
+
+
+      <li data-id="id-10" class="portfolio-item" data-type="cweb">
+      	<a href="http://marvelwebsolutions.com/preview/Nantinee/" target="_blank" class="fancybox-media" title="Nandhinee Promoters">
+      		<div class="caption">Nandhinee Promoters</div>
+      		<img src="style/portfolio/web10.jpg" alt=""/> 
+        </a> 
+      </li>
+
+
+      <li data-id="id-11" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web11_big.jpg" class="fancybox-media" title="Sway Antipiracy">
+      		<div class="caption">Sway Antipiracy</div>
+      		<img src="style/portfolio/web11.jpg" alt=""/> 
+        </a> 
+      </li>
+
+
+      <li data-id="id-12" class="portfolio-item" data-type="web">
+      	<a href="http://www.oem4u.com/oem4u/" target="_blank" class="fancybox-media" title="OEM4U">
+      		<div class="caption">OEM4U</div>
+      		<img src="style/portfolio/web12.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+       <li data-id="id-12" class="portfolio-item" data-type="logs">
+      	<a href="style/portfolio/logo03.jpg" class="fancybox-media" title="Ming Global">
+      		<div class="caption">Ming Global</div>
+      		<img src="style/portfolio/logo_thumb03.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="wordpress">
+      	<a href="http://pollachiarea.com/" target="_blank" class="fancybox-media" title="Pollachi Area">
+      		<div class="caption">Pollachi Area</div>
+      		<img src="style/portfolio/web13.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="wordpress">
+      	<a href="www.sakthivelperumal.com" target="_blank" class="fancybox-media" title="Sakthivel Perumal Online Marketer">
+      		<div class="caption">Sakthivel Perumal Online Marketer</div>
+      		<img src="style/portfolio/web14.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="joomla">
+      	<a href="style/portfolio/web15_big.jpg" class="fancybox-media" title="Sarvayogam Builders">
+      		<div class="caption">Sarvayogam Builders</div>
+      		<img src="style/portfolio/web15.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="joomla">
+      	<a href="style/portfolio/web16_big.jpg" class="fancybox-media" title="SteinTech Industries">
+      		<div class="caption">SteinTech Industries</div>
+      		<img src="style/portfolio/web16.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+       <li data-id="id-12" class="portfolio-item" data-type="logs">
+      	<a href="style/portfolio/logo02.jpg" class="fancybox-media" title="Decarate">
+      		<div class="caption">Decarate</div>
+      		<img src="style/portfolio/logo_thumb02.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="wordpress">
+      	<a href="style/portfolio/web17_big.jpg" class="fancybox-media" title="Warren Bradley Estates">
+      		<div class="caption">Warren Bradley Estates</div>
+      		<img src="style/portfolio/web17.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web18_big.jpg" class="fancybox-media" title="Blaque Pearl">
+      		<div class="caption">Blaque Pearl</div>
+      		<img src="style/portfolio/web18.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web19_big.jpg" class="fancybox-media" title="Infantopia">
+      		<div class="caption">Infantopia </div>
+      		<img src="style/portfolio/web19.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web20_big.jpg" class="fancybox-media" title="John Duffy Energy">
+      		<div class="caption">John Duffy Energy </div>
+      		<img src="style/portfolio/web20.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web21_big.jpg" class="fancybox-media" title="Refer A Friend">
+      		<div class="caption">Refer A Friend</div>
+      		<img src="style/portfolio/web21.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+       <li data-id="id-12" class="portfolio-item" data-type="logs">
+      	<a href="style/portfolio/logo01.jpg" class="fancybox-media" title="Hackerz">
+      		<div class="caption">Hackerz</div>
+      		<img src="style/portfolio/logo_thumb01.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+      <li data-id="id-12" class="portfolio-item" data-type="web">
+      	<a href="style/portfolio/web22_big.jpg" class="fancybox-media" title="Tinylush">
+      		<div class="caption">Tinylush</div>
+      		<img src="style/portfolio/web22.jpg" alt=""/> 
+        </a> 
+      </li>
+      <li data-id="id-12" class="portfolio-item" data-type="wordpress">
+      	<a href="http://www.kimkampp.com/" class="fancybox-media" target="_blank" title="kimkampp">
+      		<div class="caption">kimkampp</div>
+      		<img src="style/portfolio/web23.jpg" alt=""/> 
+        </a> 
+      </li>
+      <li data-id="id-12" class="portfolio-item" data-type="wordpress">
+      	<a href="http://www.realestateinternational.biz/" target="_blank" class="fancybox-media" title="Realestate International">
+      		<div class="caption">Realestate International</div>
+      		<img src="style/portfolio/web24.jpg" alt=""/> 
+        </a> 
+      </li>
+      <li data-id="id-12" class="portfolio-item" data-type="joomla">
+      	<a href="http://linkin-u.nl/" target="_blank" class="fancybox-media" title="Linkin-u">
+      		<div class="caption">Linkin-u</div>
+      		<img src="style/portfolio/web25.jpg" alt=""/> 
+        </a> 
+      </li>
+      
+    </ul>
+    <!-- End Portfolio Elements --> 
+  </div>
+  <!-- End Portfolio Section --> 
+  
+  <!-- Begin Services Section -->
+  <div id="services" class="news-page borderline">
+  <div class="title"><h2>News <span>Latest Posts</span></h2><div class="gototop"><a href="#top" class="scrolltop" title="Go to Top"></a></div></div>
+  
+  <!-- Begin Services Container -->
+  <div id="tab-buttons-container" class="tab-container">
+
+  			<ul id="carousel" class="etabs">
+  				<li class="tab"><div class="date"><img src="style/images/icon-dev.png" alt=""/></div><a href="#post-1">Web Development</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/icon-palette.png" alt=""/></div><a href="#post-2">Web Designing</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/icon-laptop.png" alt=""/></div><a href="#post-3">Ecommerce</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/icon-easel.png" alt=""/></div><a href="#post-4">Real Estate</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/small_icon1.png" alt=""/></div><a href="#post-5">Search Engine Optimization</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/small_icon3.png" alt=""/></div><a href="#post-6">Flash Web Design</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/small_icon6.png" alt=""/></div><a href="#post-7">Responsive Template</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/icon-camera.png" alt=""/></div><a href="#post-8">Social Networking</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/small_icon5.png" alt=""/></div><a href="#post-9">Portal Development</a></li>
+  				<li class="tab"><div class="date"><img src="style/images/small_icon4.png" alt=""/></div><a href="#post-10">Mobile Applications</a></li>
+  			</ul>
+	
+	<!-- Begin Entries --> 
+  	<div class="panel-container">
+  		<div id="post-1" class="tab-buttons-panel ulsample">
+  			<h2>Web Development</h2>
+          	<p>Create your own unique presence on the World Wide Web. Using solid Web   Development principles and the latest technology, we&rsquo;ll help you express   your business to the rest of the world. </p>
+<p>As the primary interface between yourself and the online   community, your website needs to make that all important &lsquo;first   impression&rsquo;. It&rsquo;s up to you to decide what you&rsquo;d like it to say, we&rsquo;ll   handle the rest. </p>
+<p>If you&rsquo;re in the market for a complete large-scale E-commerce   solution or just an online presence, we know of an ideal solution that   meets your objectives. </p>
+<p>All of our strategies are structured to be completely   scalable, allowing you to choose the level of Web Development that your   business and your budget are most comfortable with. <br />
+  A successful Web Development strategy embodies;</p>
+<ul>
+  <li>Market awareness, </li>
+  <li> Business acumen, </li>
+  <li> Competitor evaluation, </li>
+  <li> Appropriate technology use, </li>
+  <li> A sound Implementation strategy &hellip; </li>
+</ul>
+<p> and a good dose of imagination. <br />
+    <br />
+  Understanding your challenges in business we build your   web site that speaks volume to your customers, your employees, and your   competition in market. Our designers and developers are consistent to   provide superior design and solutions by implementing a memorable site   that communicates with your image professionalism, and strengthens your   position with your target audience in every perspective.</p>
+<ul>
+  <li>Ecommerce solutions &amp; development</li>
+  <li>Shopping cart solutions</li>
+  <li>Payment gateway solutions</li>
+  <li>CMS</li>
+  <li>Social Networking solutions</li>
+  <li>Mobile synchronization</li>
+  <li>Blog Development</li>
+</ul>
+<p>Open Source Integration:</p>
+<p>Open source application is a better way to save time. But   open-source software didn&rsquo;t provide guarantee to quality. For this, our   designers and developers work tremendously on customization, of your   open source projects as per your requirements.</p>
+<ul>
+  <li>Magento</li>
+  <li>osCommerce</li>
+  <li>Joomla</li>
+  <li>WordPress</li>
+  <li>Drupal</li>
+  <li>PHPBB</li>
+</ul>
+<p><strong>Our Web Development strategies</strong> ensure a   healthy combination of market research and technical excellence.   Ensuring your website not only supports your immediate goals, but   continues to adapt and thrive in your market space, with a little help   from our maintenance programs. </p>
+<p>Our studied and structured approach to <strong>Web Development </strong>has   additional benefits. Assuring you of a robust solution that is never   over-engineered. In our experience, overly engineered solutions are   costly and more importantly inefficient, incurring spiraling maintenance   costs your online business doesn&rsquo;t need. </p>
+<p>This is why we take great pride in on our ability to accurately assess and match your business requirements to the perfect <strong>Web Development </strong>technology. Making the most of your budget and meeting your online aspirations at the same time. </p>
+<p>Let us know what your business is about? What are your online aspirations? </p>
+<p><a href="index.html#contact">Contact us</a> to find out more about our <strong>Web Development</strong> solutions.</p>
+        </div>
+  		<div id="post-2" class="tab-buttons-panel ulsample">
+
+            <h2>Web Designing</h2>
+          	<p>From the initial concept through to a successful implementation,   utilising our integrated business process and fixed time and price   approach, <strong>Marvel Web Solutions</strong> is able to deliver end-to-end, mission critical web design solutions on time, within the agreed budget.<br />
+    <br />
+  A professionally designed website is the most cost effective   marketing tool available in the world today. We are confident that all   of our clients would not hesitate to recommend our web design services.<br />
+  <br />
+  Marvel Web Solutions can: </p>
+<ul>
+  <li>Design &amp; redesign professional websites to the latest web 2.0 standards</li>
+  <li>Differentiate your website from the rest by offering you web design consultancy</li>
+  <li>Advise you on what works and what does not on the web, in clear and plain English </li>
+  <li>Develop self updateable CMS systems so you can maintain your website yourself</li>
+  <li>Market your website on the search engines<br />
+  </li>
+</ul>
+<p>Considering the excogitated importance of web design, <strong>Marvel Web Solutions</strong> put its greatest endeavor and creativity to build your website that   will stand out of the rest and contribute to the triumph of your   business.</p>
+<ul>
+  <li>HTML / XHTML</li>
+  <li>CSS / CSS2</li>
+  <li>Web2.0</li>
+  <li>Flash</li>
+  <li>Image Editing</li>
+  <li>Photoshop Design</li>
+  <li>Logo Design</li>
+  <li>Banner Design</li>
+  <li>PSD to HTML<br />
+  </li>
+</ul>
+<p><strong>Marvel Web Solutions</strong>- is an award winning web   design company, established in 2006, has helped hundreds of firms reap   the rewards of the Internet in its decade-long history. Our highly   skilled team of professional web designers, creative graphic design   specialists work together with our marketing consultants and project   managers to create explosive visual impacts that will get your company   noticed in whatever visual format you need. Be it a bespoke brochure or   sophisticated website, we will maximise your potential and achieve an   impressive return on your investment.</p>
+<p>If you are considering a one man band or a freelance web   designer, stop and think for a moment. How can a technical programmer   also have a creative website design qualification and have a business   degree? People are either creative, technical or business minded. A   professional web design company such as <strong>Marvel Web Solutions </strong>will   always utilise different specialists for each of the various components   necessary to build a successful website. The different staff all work   together as a professional web design team to provide high-end, creative   websites. This allows us to build the perfect website that will be   aesthetically pleasing, load quickly as well as achieve its business   objectives.<br />
+    <br />
+    <strong>Marvel Web Solutions</strong> is also dedicated to providing its customers with the highest levels of service, support and jargon-free web design advice.</p>
+                  
+        </div>                      
+  			
+  		<div id="post-3" class="tab-buttons-panel ulsample">
+
+            <h2>Ecommerce</h2>
+          	<p>Electronic Commerce is exactly analogous to a marketplace on the   Internet. Electronic Commerce (also referred to as EC, e-commerce   eCommerce or ecommerce) consists primarily of the distributing, buying,   selling, marketing and servicing of products or services over electronic   systems such as the Internet and other computer networks. <strong>Marvel Web Solutions</strong> sees it as an electronic business application aimed at commercial   transactions; in this context, it can involve electronic funds transfer,   supply chain management, e-marketing, online marketing, online   transaction processing, electronic data interchange (EDI), automated   inventory management systems, and automated data collection systems.   Electronic commerce typically uses electronic communications technology   of the World Wide Web, at some point in the transaction's lifecycle,   although of course electronic commerce frequently depends on computer   technologies other than the World Wide Web, such as databases, and   e-mail, and on other non-computer technologies, such as transportation   for physical goods sold via e-commerce.<br />
+    <br />
+  When Building an Ecommerce Solution, <strong>Marvel Web Solutions</strong> always keeps in mind the Customer&rsquo;s experience:<br />
+  <br />
+  <strong>Marvel Web Solutions</strong> believes that a successful   e-commerce organization must also provide an enjoyable and rewarding   experience to its customers. Many factors go into making this possible.   Such factors include:<br />
+  Providing value to customers. Vendors can achieve this by offering   a product or product-line that attracts potential customers at a   competitive price, as in non-electronic commerce.</p>
+<ul>
+  <li>Providing service and performance. Offering a responsive,   user-friendly purchasing experience, just like a flesh-and-blood   retailer, may go some way to achieving these goals.</li>
+  <li>Providing an incentive for customers to buy and to return.   Sales promotions to this end can involve coupons, special offers, and   discounts. Cross-linked websites and advertising affiliate programs can   also help.</li>
+  <li>Providing personal attention. Personalized web sites,   purchase suggestions, and personalized special offers may go some of the   way to substituting for the face-to-face human interaction found at a   traditional point of sale.</li>
+  <li>Providing a sense of community. Chat rooms, discussion   boards, soliciting customer input and loyalty programs (sometimes called   affinity programs) can help in this respect.</li>
+  <li>Owning the customer's total experience. E-tailers foster   this by treating any contacts with a customer as part of a total   experience, an experience that becomes synonymous with the brand.</li>
+  <li>Letting customers help themselves. Provision of a self-serve   site, easy to use without assistance, can help in this respect. This   implies that all product information is available, cross-sell   information, advice for product alternatives, and supplies &amp;   accessory selectors.</li>
+  <li>Helping customers do their job of consuming. E-tailers and   online shopping directories can provide such help through ample   comparative information and good search facilities. Provision of   component information and safety-and-health comments may assist   e-tailers to define the customers' job.</li>
+</ul>  
+            				          
+        </div>
+        
+  		<div id="post-4" class="tab-buttons-panel ulsample">
+ 			<h2>Real Estate</h2>
+          
+          	<p>We are a full service real estate Portal Development company in India base. <strong>Marvel Web Solutions&reg;</strong> is a leading real estate web portal development company specializes in   developing B2B and B2C portals - fully customized e-business hubs which   will promote your products and services. Real estate website - portal   is developed using Ajax, PHP and My SQL as database. Main features for   real estate portal are listed below.<br />
+<ul>
+  <li>Search/ Add/ Edit the properties</li>
+  <li>Showing the property location on the Microsoft Map point in detail page</li>
+  <li>Sort by any criteria on the result page</li>
+  <li>Display featured property on the front page</li>
+  <li>Membership Registration</li>
+  <li>Payment Processing with Paypal, or major Credit Card with recurring billing solution</li>
+  <li>User Friendly Reports &amp; Charts </li>
+</ul>
+<p>Real Estate Website for Selling, Buying the Properties Worldwide. If   you want to start your own web site or portal for real estate then you   will love this application. We will provide you all the features and   some advance custom services which are design and developed with highly   search features</p>
+</p><strong>Marvel Web Solutions</strong> is one of the most excellent   Real Estate Website and Portal Designer from India and provide total   solutions to your real estate business through which you can give your   online real estate business solutions services with the help of new   technology to the vast people through internet through out the world. We   can provide you all kind of real estate websites according to your   requirement and full solutions including realtor sites, real estate   agent sites, broker sites, property listing sites, holiday rentals, real   estate buy and sell, ad space selling sites and many more. Marvel Web   Solutions&reg;  developers - professional have very much expert in changing   your thought into a customize way on the real estate web portal.</p>
+                   			
+		</div>
+		
+		<div id="post-5" class="tab-buttons-panel ulsample">
+ 
+          <h2>Search Engine Optimization</h2>
+          
+          <p>Having a web site is only the first step towards making use of the   internet as a marketing tool. Equally as important (and some would even   say more important) is promoting your site to ensure you attract as many   potential customers as possible. Search engine optimising is a crucial   step part of your web marketing.</p>
+<p>Search engines display different kinds of listings on a search   engine results page, including paid advertising in the form of pay per   click advertisements and paid inclusion listings, as well as unpaid   organic search results and keywords specific listings, such as news   stories, definitions, map locations, and images.</p>
+<p><strong>Search Engine Optimisation</strong> (SEO) is concerned with improving the number and position of a site's listings in the organic search results. </p>
+<p><strong>Search Engine Optimisation</strong> and search   marketing has become quite advanced in the last few years and its   importance when building a website needs to be seriously taken into   consideration. Using statistics received from tracking code on your site   we can structure the building and maintenance of it to take advantage   of opportunities that google and other search engines offer us.</p>
+<p>At <strong>Marvel Websolutions</strong>, we employ proven   Search Engine Optimization techniques to rank our client&rsquo;s websites in   the top positions on all of the major search engines and directories.</p>
+<ul>
+  <li> Onsite Optimization</li>
+  <li>Offsite Optimization</li>
+  <li>Search Engine Marketing</li>
+  <li>Mobile advertising</li>
+  <li>Internet Marketing</li>
+  <li>Affiliate marketing</li>
+</ul>
+                   			
+		</div>
+		
+		<div id="post-6" class="tab-buttons-panel ulsample">
+ 
+          <h2>Flash Web Design</h2>
+          
+          <p>Do you need a stunning Flash website? </p>
+<p>The initial benefit of a flash web design is to make your   website attractive to visitors when they visit your web site. The use of   animation in website design is a challenge - not so much in terms of   the technical aspect as in the creative aspect. We, at <strong>Marvel Web Solutions</strong>,   add animation and interactivity to our client's websites using Flash   development taking your idea or concept to another level to give your   products and service a unique identity. Our web designers can create   Flash website in an eye catching and sophisticated way able to feature   interactive image galleries, flash video players, stylish menus or   entire flash websites.</p>
+<p>The traditional method of web designing is rapidly replaced by   the innovative flash web design. We design flash designs for the   homepage intro, online demo and flash presentations for the complicated   theme. Flash can be used to create more polished and sophisticated menus   and to expand the visual impact of a site beyond that of its normal   HTML counterpart. Our skilled Flash programmers are able to provide   basic Flash animations right up to Database Driven Flash Applications.<strong> Marvel Web Solutions</strong> can create animation to add interest and draw attention to certain   items you wish to highlight such as a logo, a product, or to direct   visitors to an area you want to give more prominence. Flash can also be   well used to feature a product through interacting with the website   user. These animations very quickly increase understanding and reality   on the products you have to offer, or can be used to educate users.</p>
+<p><strong>Marvel Web Solutions </strong>team of Flash Developers   provides not only Flash animations and presentations for your website,   but also creates interesting product demos, create interest by adding   movement to an otherwise static site, design unique logos and layout   designs and create flash based advertisements while ensuring that the   Flash files are optimized for quick loading time.</p>
+<p><strong>Our flash web designs are capable of having. </strong></p>
+<ul>
+  <li>Navigation with animation.</li>
+  <li>Sound and animation that loads quickly</li>
+  <li>Online presentation with eye-catching graphics</li>
+  <li>Rich-user interfaces that enhance user experience</li>
+  <li>Cutting edge visual effects</li>
+</ul>
+<p>The Flash Website Design enables you to create   simple as well as complex Flash animations, where by you can combine   different fonts and effects within a single Flash animation. Flash   Website Design is very user-friendly, wide range effect templates ready   for use, and you don't need any Flash/HTML or programming skills to use   it. . A presence on the Internet brings you into today's world of   advertising, allowing you to reach out to a vast amount of potential   clients. Why not allow your business to step up to the plate. </p>
+                   			
+		</div>
+		
+		<div id="post-7" class="tab-buttons-panel ulsample">
+ 
+          <h2>Responsive Template</h2>
+          
+          <p>Suspendisse vel ultricies ante. Nullam urna ante, ullamcorper eget ornare faucibus, posuere in libero. Nunc bibendum mattis viverra. Proin mattis, dui quis volutpat sagittis, dolor sem placerat elit, sit amet pellentesque lacus mi suscipit justo. Fusce tempor pulvinar nibh eget vulputate. Etiam eleifend justo ut massa suscipit nec ultricies orci consectetur. Morbi lacinia diam in turpis euismod vel viverra felis hendrerit. Proin risus massa, dapibus auctor commodo eget, commodo eu augue. Sed eu velit vitae felis malesuada accumsan ac eget felis. Fusce massa odio, dapibus sit amet consectetur mollis, ullamcorper quis leo. Pellentesque ac sapien purus. Curabitur ultricies porta massa, non suscipit purus tincidunt id. Aenean tincidunt sapien eget diam convallis viverra.</p>
+                   			
+		</div>
+		
+		<div id="post-8" class="tab-buttons-panel ulsample">
+ 
+          <h2>Social Networking</h2>
+          
+          <p>Nam eu ante sem. Duis commodo orci in quam porttitor non viverra metus ornare. Nam tincidunt, odio eget placerat rhoncus, velit metus vulputate felis, a eleifend nisl mi gravida sem. Sed nisl ante, lobortis convallis dictum at, tincidunt vel dui. Quisque lobortis dui enim. Phasellus egestas, mi eu ultricies aliquam, tortor est sollicitudin orci, at semper massa sem et sem. Mauris elementum lectus ac est venenatis tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed consequat pulvinar tincidunt. Suspendisse sit amet lacinia nibh. Sed tristique ligula vel erat suscipit et hendrerit ante iaculis. Sed imperdiet ipsum vel dui vehicula sed cursus nunc consectetur. Proin tristique pretium tristique. Aliquam malesuada rutrum malesuada. Vestibulum lobortis semper ultrices. Aenean lobortis pellentesque dui eu aliquet.</p>
+                   			
+		</div>
+		
+		<div id="post-9" class="tab-buttons-panel ulsample">
+ 
+          <h2>Portal Development</h2>
+          
+          <p>Nullam nec neque a neque malesuada interdum sed ut mauris. Quisque venenatis orci sed nisl tempor dignissim. Donec velit lectus, dapibus eget adipiscing at, adipiscing eget metus. Nunc tortor tortor, sollicitudin in cursus quis, gravida et est. Ut commodo mi metus. Donec varius scelerisque velit quis cursus. Mauris congue nibh nec lacus tempus tempor. Morbi hendrerit commodo imperdiet. Donec quis semper metus. Fusce bibendum, risus ac aliquam elementum, tellus elit blandit metus, id tempor tortor mi id massa. Mauris egestas tellus non enim viverra eu lobortis justo dignissim. In vitae metus id mi tempus pulvinar eu ut nisl. Vestibulum id dui mauris, at sollicitudin justo. Nullam nisl ante, volutpat vel pharetra eu, ornare ut arcu. Donec tincidunt vulputate elit, ut malesuada libero rutrum sit amet. Ut quis ipsum odio. </p>
+                   			
+		</div>
+		
+		<div id="post-10" class="tab-buttons-panel ulsample">
+          <h2>Mobile Applications</h2>
+          <p>Morbi ac nulla lacus. Sed in dolor erat, nec tincidunt nibh. In justo purus, interdum sit amet porttitor nec, malesuada eu enim. In eu mauris ut sem scelerisque fermentum non eu lectus. Praesent vitae placerat enim. Cras commodo nisi id justo ultricies feugiat. In sagittis elementum mattis. Nunc varius, tellus rhoncus ultrices volutpat, risus odio fermentum felis, eget suscipit leo lorem vel lacus. Nam fermentum dui ut sem bibendum consequat. Fusce elementum elit sit amet felis eleifend interdum. In rhoncus, augue sit amet pellentesque fermentum, mi libero dictum quam, vitae tempor risus nisl mattis eros. Mauris id felis nibh, a venenatis metus. Sed libero lectus, consectetur id ornare in, suscipit blandit mi.</p>
+                   			
+		</div>
+
+   </div> <!-- End Entries --> 
+   
+   
+   <script type="text/javascript">
+$(function(){
+             $('.slide-out-div').tabSlideOut({
+                 tabHandle: '.handle',                              //class of the element that will be your tab
+                 pathToTabImage: 'http://elemisdesign.com/ct2.jpg',          //path to the image for the tab (optionaly can be set using css)
+                 imageHeight: '200px',                               //height of tab image
+                 imageWidth: '35px',                               //width of tab image    
+                 tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
+                 speed: 300,                                        //speed of animation
+                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                 topPos: '50px',                                   //position from the top
+                 fixedPosition: false                               //options: true makes it stick(fixed position) on scroll
+             });
+         });
+</script>
+<div class="slide-out-div">
+<a class="handle" href="#">Content</a>
+<ul id="navigation123">
+<li><a href="#" rel="style/css/dark.css" dir="dark">Dark</a></li>
+<li><a href="#" rel="style/css/darklight.css" dir="darklight">Darklight</a></li>
+<li><a href="#" rel="style/css/light.css" dir="light">Light</a></li>
+<li><a href="#" rel="style/css/red.css" dir="red">Red</a></li>
+<li><a href="#" rel="style/css/blue.css" dir="blue">Blue</a></li>
+</ul>
+
+
+
+</div>
+<script type="text/javascript">
+$('a[data-rel]').each(function() {
+    $(this).attr('rel', $(this).data('rel'));
+});
+</script>
+</body>
+</html>
+  </div><!-- End Services Container -->
